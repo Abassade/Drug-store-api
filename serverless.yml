@@ -1,0 +1,33 @@
+# Welcome to Serverless!
+service: serverless-example
+app: drug-store-api
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  region: us-east-1
+
+functions:
+  productAPI:
+    handler: Controller/drug.handler
+    events:
+        - http:
+            path: /
+            method: get
+        - http:
+            path: /drug
+            method: post
+        - http:
+            path: /drugs
+            method: get
+        - http:
+            path: /drug/{drugId}
+            method: get
+        - http:
+            path: /drug-update/{drugId}
+            method: put
+
+plugins:
+  - serverless-offline
+  - serverless-dotenv-plugin

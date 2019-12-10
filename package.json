@@ -1,0 +1,24 @@
+{
+  "name": "serverlesss-api-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "api": "serverless offline start --skipCacheInvalidation",
+    "deploy": "sls deploy -v"
+  },
+  "keywords": [],
+  "author": "Abass Ade",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-dotenv": "1.0.0-beta.2",
+    "serverless-offline": "5.12.1"
+  },
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "express": "4.17.1",
+    "mongoose": "5.8.0",
+    "serverless-http": "2.3.0",
+    "uuid": "3.3.3"
+  }
+}
